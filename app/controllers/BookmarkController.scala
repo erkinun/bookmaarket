@@ -15,6 +15,8 @@ class BookmarkController @Inject() (val messagesApi: MessagesApi) extends Contro
   def list = Action { implicit request =>
     val bookmarks = Bookmark.findAll
 
+    println(s"bookmark count for now: ${bookmarks.size}")
+
     Ok(views.html.bookmarks.list(bookmarks))
   }
 }

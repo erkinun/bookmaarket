@@ -1,9 +1,10 @@
 @(bookmarks: List[Bookmark])(implicit messages: Messages)
 @main(Messages("application.name")) {
-<dl class="bookmarks">
-    @for(bookmark <- bookmarks) {
-    <dt>@bookmark.url</dt>
-    <dd>@bookmark.description</dd>
-    <dd>@bookmark.folderName</dd>
-    } </dl>
+  <dl class="bookmarks">
+      @for(bookmark <- bookmarks) {
+        <dt>@bookmark.url</dt>
+        <dd>@bookmark.description</dd>
+        <dd>@bookmark.folderName</dd>
+      }
+  </dl>
 }

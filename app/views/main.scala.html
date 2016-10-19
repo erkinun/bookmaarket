@@ -25,14 +25,14 @@
 
                         <a class="brand" href="@routes.HomeController.index()">
                             @Messages("application.name")
-                        </a> </div>
+                        </a>
+                    </div>
+                    <div class="container">
+                        @* And here's where we render the `Html` object containing
+                         * the page content. *@
+                        @content
+                    </div>
                 </div>
-            </div>
-
-            <div class="container">
-        @* And here's where we render the `Html` object containing
-         * the page content. *@
-        @content
             </div>
         </div>
     </body>
