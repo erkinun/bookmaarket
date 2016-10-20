@@ -1,1 +1,5 @@
 application.name = Bookmaarket!
+
+bookmark.details = Bookmark Details
+folder = Folder
+description = Description

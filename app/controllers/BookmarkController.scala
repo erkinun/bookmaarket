@@ -19,4 +19,10 @@ class BookmarkController @Inject() (val messagesApi: MessagesApi) extends Contro
 
     Ok(views.html.bookmarks.list(bookmarks))
   }
+
+  def show(id: Long) = Action { implicit request =>
+    Bookmark.findById(id).map { bookmark =>
+      Ok(views.html.bookmarks.details(bookmark))
+    }.getOrElse(NotFound)
+  }
 }

@@ -14,4 +14,6 @@ object Bookmark {
   )
 
   def findAll = bookmarks.toList
+
+  def findById(id: Long): Option[Bookmark] = bookmarks find { bm => bm.id == id}
 }
