@@ -1,4 +1,4 @@
-@(bookmarks: List[Bookmark])(implicit messages: Messages)
+@(bookmarks: List[Bookmark])(implicit messages: Messages, flash: Flash)
 @main(Messages("application.name")) {
   <dl class="bookmarks">
       @for(bookmark <- bookmarks) {
@@ -7,4 +7,10 @@
         <dd>@bookmark.folderName</dd>
       }
   </dl>
+
+  <p>
+    <a href="@controllers.routes.BookmarkController.newBookmark()"
+       class="btn">
+        <i class="icon-plus"></i> @Messages("bookmark.new.command")</a>
+  </p>
 }

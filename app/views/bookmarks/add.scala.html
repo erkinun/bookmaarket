@@ -1,0 +1,23 @@
+@(bookmarkForm: Form[Bookmark])(implicit flash: Flash, messages: Messages)
+
+@import helper._
+
+@main(Messages("bookmark.form")) {
+  <h2>@Messages("bookmark.form")</h2>
+
+  @helper.form(action = routes.BookmarkController.save()) {
+    <fieldset>
+        <legend>
+            @Messages("bookmark.details", Messages("bookmark.new"))
+        </legend>
+
+        @helper.inputText(bookmarkForm("url"))
+        @helper.inputText(bookmarkForm("description"))
+        @helper.inputText(bookmarkForm("folderName"))
+    </fieldset>
+
+    <p>
+        <input type="submit" class="btn primary" value='@Messages("bookmark.new.submit")'/>
+    </p>
+  }
+}

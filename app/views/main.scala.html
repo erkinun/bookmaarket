@@ -4,7 +4,7 @@
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  *@
-@(title: String)(content: Html)(implicit messages: Messages)
+@(title: String)(content: Html)(implicit messages: Messages, flash: Flash)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +34,20 @@
                     </div>
                 </div>
             </div>
+
+            <div class="container">
+                @if(flash.get("success").isDefined){
+                    <div class="alert alert-success">
+                      @flash.get("success")
+                    </div>
+                }
+                @if(flash.get("error").isDefined){
+                    <div class="alert alert-error">
+                      @flash.get("error")
+                    </div>
+                }
+            </div>
+
         </div>
     </body>
 </html>

@@ -10,7 +10,10 @@ GET     /count                      controllers.CountController.count
 GET     /message                    controllers.AsyncController.message
 
 GET     /bookmarks                  controllers.BookmarkController.list
+GET     /bookmarks/new              controllers.BookmarkController.newBookmark
+POST    /bookmarks/save             controllers.BookmarkController.save
 GET     /bookmarks/:id              controllers.BookmarkController.show(id: Long)
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

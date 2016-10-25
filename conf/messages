@@ -3,3 +3,12 @@ application.name = Bookmaarket!
 bookmark.details = Bookmark Details
 folder = Folder
 description = Description
+
+bookmark.form = Save a Bookmark!
+bookmark.new = (new)
+bookmark.new.command = New
+bookmark.new.submit = Add
+bookmark.new.success = Bookmark Saved!
+
+validation.errors = Please correct the errors
+validation.url.duplicate = Same url already exists
