@@ -2,7 +2,8 @@ package controllers
 
 import javax.inject.{Inject, Singleton}
 
-import models.Bookmark
+import models.{BookmarkRepo, Bookmark}
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.api.data.Form
 import play.api.data.Forms._
 import play.api.i18n.{Messages, I18nSupport, MessagesApi}
@@ -14,7 +15,7 @@ import play.api.mvc.{Action, Controller, Flash}
 
 // TODO add appropriate links to details page
 @Singleton
-class BookmarkController @Inject() (val messagesApi: MessagesApi) extends Controller
+class BookmarkController @Inject() (val messagesApi: MessagesApi, bookmarkRepo: BookmarkRepo) extends Controller
   with I18nSupport  {
 
   // TODO put some validation on this form
@@ -23,21 +24,23 @@ class BookmarkController @Inject() (val messagesApi: MessagesApi) extends Contro
       "url" -> nonEmptyText,
       "description" -> nonEmptyText,
       "folderName" -> nonEmptyText
-    ) (Bookmark.unsaved)(Bookmark.unapplyShort)
+    ) (bookmarkRepo.unsaved)(bookmarkRepo.unapplyShort)
   }
 
-  def list = Action { implicit request =>
-    val bookmarks = Bookmark.findAll
+  def list = Action.async { implicit request =>
+    val bookmarks = bookmarkRepo.selectAll
 
-    println(s"bookmark count for now: ${bookmarks.size}")
+    //println(s"bookmark count for now: ${bookmarks.size}")
 
-    Ok(views.html.bookmarks.list(bookmarks))
+    bookmarks.map(allBookmarks => Ok(views.html.bookmarks.list(allBookmarks)))
   }
 
-  def show(id: Long) = Action { implicit request =>
-    Bookmark.findById(id).map { bookmark =>
-      Ok(views.html.bookmarks.details(bookmark))
-    }.getOrElse(NotFound)
+  def show(id: Long) = Action.async { implicit request =>
+
+    for {
+      Some(bookmark) <- bookmarkRepo.findById(id)
+    } yield Ok(views.html.bookmarks.details(bookmark))
+    //}.getOrElse(NotFound)
   }
 
   def save = Action { implicit request =>
@@ -51,7 +54,7 @@ class BookmarkController @Inject() (val messagesApi: MessagesApi) extends Contro
       },
 
       success = { newBookmark =>
-        Bookmark.add(newBookmark)
+        bookmarkRepo.add(newBookmark)
         val message = Messages("bookmark.new.success", newBookmark.url)
         Redirect(routes.BookmarkController.list()).flashing("success" -> message)
       }

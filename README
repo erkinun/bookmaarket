@@ -16,17 +16,9 @@ Controllers
 
   Shows how to do asynchronous programming when handling a request.
 
-- CountController.scala:
-
-  Shows how to inject a component into a controller and use the component when
-  handling requests.
 
 Components
 ==========
-
-- Module.scala:
-
-  Shows how to use Guice to bind all the components needed by your application.
 
 - Counter.scala:
 
