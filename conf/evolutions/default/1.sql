@@ -1,0 +1,12 @@
+# --- !Ups
+
+CREATE TABLE BOOKMARKS (
+    ID integer NOT NULL AUTO INCREMENT PRIMARY KEY,
+    URL varchar(512) NOT NULL,
+    DESCRIPTION varchar(1000),
+    FOLDER_NAME varchar(250)
+)
+
+# --- !Downs
+
+DROP TABLE BOOKMARKS
