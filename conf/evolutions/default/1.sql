@@ -7,6 +7,12 @@ CREATE TABLE BOOKMARKS (
     FOLDER_NAME varchar(250)
 );
 
+INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('http://ggia.berkeley.edu/practice/meaningful_pictures', 'Greater Good link', 'GGIA');
+INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('http://www.ybrikman.com/writing/2014/03/10/the-ultimate-guide-to-getting-started/', 'Scala', 'Scala');
+INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('http://ggia.berkeley.edu/practice/finding_silver_linings', 'Greater Good link', 'GGIA');
+INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('http://stackoverflow.com/questions/tagged/playframework', 'Scala', 'Scala');
+
+
 # --- !Downs
 
 DROP TABLE BOOKMARKS;

@@ -23,14 +23,6 @@ class BookmarkRepo @Inject()(protected val dbConfigProvider: DatabaseConfigProvi
   //val db = Database.forConfig("h2mem1")
   private val bookmarks: TableQuery[Bookmarks] = TableQuery[Bookmarks]
 
-  // TODO this has to be a data repo
-  /*var bookmarks = Set (
-    Bookmark("http://ggia.berkeley.edu/practice/meaningful_pictures", "Greater Good link", "GGIA", 1),
-    Bookmark("http://ggia.berkeley.edu/practice/finding_silver_linings", "Greater Good link", "GGIA",  2),
-    Bookmark("http://www.ybrikman.com/writing/2014/03/10/the-ultimate-guide-to-getting-started/", "Scala", "Scala", 3),
-    Bookmark("http://stackoverflow.com/questions/tagged/playframework", "Scala", "Scala", 4)
-  )*/
-
   def selectAll: Future[List[Bookmark]] = db.run(bookmarks.to[List].result)
 
   def findById(id: Long): Future[Option[Bookmark]] = db.run {
