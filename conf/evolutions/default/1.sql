@@ -11,6 +11,7 @@ INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('http://ggia.berke
 INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('http://www.ybrikman.com/writing/2014/03/10/the-ultimate-guide-to-getting-started/', 'Scala', 'Scala');
 INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('http://ggia.berkeley.edu/practice/finding_silver_linings', 'Greater Good link', 'GGIA');
 INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('http://stackoverflow.com/questions/tagged/playframework', 'Scala', 'Scala');
+INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('https://github.com/mbonaci/mbo-storm/wiki/Integrate-Travis-CI-with-your-GitHub-repo', 'Github CI integration', 'Open Source')
 
 
 # --- !Downs
