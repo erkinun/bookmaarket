@@ -19,7 +19,9 @@ import play.api.mvc.{Action, Controller, Flash}
 // TODO add some kind of prefetched data
 // TODO save database content to h2
 // TODO show per user or per id their bookmarks
-// TODO add authentication 
+// TODO add authentication
+// TODO private bookmarks?
+// TODO show per folder
 
 @Singleton
 class BookmarkController @Inject() (val messagesApi: MessagesApi, bookmarkRepo: BookmarkRepo) extends Controller
