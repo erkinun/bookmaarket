@@ -1,0 +1,14 @@
+application.name = Bookmaarket!
+
+bookmark.details = Bookmark Detaylar
+folder = Kategori
+description = Açıklama
+
+bookmark.form = Bookmark Kaydet!
+bookmark.new = (new)
+bookmark.new.command = Yeni
+bookmark.new.submit = Ekle
+bookmark.new.success = Bookmark Kaydedildi!
+
+validation.errors = Lütfen hataları düzeltin
+validation.url.duplicate = Bu url daha önceden kaydedilmiş
