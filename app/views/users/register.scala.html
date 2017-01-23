@@ -1,0 +1,25 @@
+@(registerForm: Form[User])(implicit flash: Flash, messages: Messages)
+
+@main("Register!"){
+   <form action="@routes.UserController.createUser()" method="post">
+       <div>
+           <label for="realname">Full Name</label>
+           <input type="text" name="realname" id="realname"/>
+       </div>
+       <div>
+           <label for="username">User Name</label>
+           <input type="text" name="username" id="username"/>
+       </div>
+       <div>
+           <label for="email">Email</label>
+           <input type="text" name="email" id="email"/>
+       </div>
+       <div>
+           <label for="password">Password</label>
+           <input type="password" name="password" id="password"/>
+       </div>
+       <div class="buttons">
+           <button type="submit">Register</button>
+       </div>
+   </form>
+}
