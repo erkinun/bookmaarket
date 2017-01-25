@@ -18,7 +18,6 @@ import play.api.mvc.{Action, Controller}
 @Singleton
 class UserController @Inject()(val messagesApi: MessagesApi) extends Controller with I18nSupport {
 
-
   val userForm = Form {
     mapping(
       "username" -> nonEmptyText(minLength = 8),
