@@ -22,6 +22,7 @@ import play.api.mvc.{Action, Controller, Flash}
 // TODO add authentication
 // TODO private bookmarks?
 // TODO show per folder
+// TODO add import support from bookmark htmls
 
 @Singleton
 class BookmarkController @Inject() (val messagesApi: MessagesApi, bookmarkRepo: BookmarkRepo) extends Controller
