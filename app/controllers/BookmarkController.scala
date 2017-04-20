@@ -40,8 +40,6 @@ class BookmarkController @Inject() (val messagesApi: MessagesApi, bookmarkRepo: 
   def list = Action.async { implicit request =>
     val bookmarks = bookmarkRepo.selectAll
 
-    //println(s"bookmark count for now: ${bookmarks.size}")
-
     bookmarks.map(allBookmarks => Ok(views.html.bookmarks.list(allBookmarks)))
   }
 
