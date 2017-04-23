@@ -9,9 +9,6 @@ import play.api.data.Forms._
 import play.api.i18n.{Messages, I18nSupport, MessagesApi}
 import play.api.mvc.{Action, Controller, Flash}
 
-/**
-  * Created by eunlu on 19/10/2016.
-  */
 
 // TODO add appropriate links to details page
 // TODO show more respect to UI

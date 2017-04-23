@@ -13,5 +13,7 @@ bookmark.new.success = Bookmark Saved!
 validation.errors = Please correct the errors
 validation.url.duplicate = Same url already exists
 
+register.new = Register as new user
 register.user.submit = Join us!
 register.user.real = Your Name
+

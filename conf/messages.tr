@@ -13,5 +13,6 @@ bookmark.new.success = Bookmark Kaydedildi!
 validation.errors = Lütfen hataları düzeltin
 validation.url.duplicate = Bu url daha önceden kaydedilmiş
 
+register.new = Yeni kullanici
 register.user.submit = Kaydet
 register.user.real = Adınız
