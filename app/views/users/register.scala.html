@@ -1,10 +1,11 @@
-@(registerForm: Form[User])(implicit flash: Flash, messages: Messages)
+@(registerForm: Form[forms.SignupData])(implicit flash: Flash, messages: Messages)
 
 @main("Register!"){
 
-  @helper.form(action = routes.UserController.createUser()) {
-    @helper.inputText(registerForm("realname"), '_label -> Messages("register.user.real"))
+  @helper.form(action = routes.SignupController.createUser()) {
     @helper.inputText(registerForm("username"))
+    @helper.inputText(registerForm("firstName"), '_label -> Messages("register.user.real"))
+    @helper.inputText(registerForm("lastName"))
     @helper.inputText(registerForm("email"))
     @helper.inputPassword(registerForm("password"))
 

@@ -16,8 +16,7 @@ import play.api.mvc.{Action, Controller, Flash}
 // TODO add appropriate links to details page
 // TODO show more respect to UI
 // TODO add other CRUD operations
-// TODO add some kind of prefetched data
-// TODO save database content to h2
+// TODO persist data content of h2
 // TODO show per user or per id their bookmarks
 // TODO add authentication
 // TODO private bookmarks?
