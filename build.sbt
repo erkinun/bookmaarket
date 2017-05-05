@@ -13,6 +13,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-slick-evolutions" % "2.0.0",
   "com.typesafe.play" %% "play-slick" % "2.0.0",
   "com.h2database" % "h2" % "1.4.193",
+  "net.codingwell" %% "scala-guice" % "4.0.1",
+  "com.iheart" %% "ficus" % "1.2.6",
   "com.mohiva" %% "play-silhouette" % "4.0.0",
   "com.mohiva" %% "play-silhouette-password-bcrypt" % "4.0.0",
   "com.mohiva" %% "play-silhouette-persistence" % "4.0.0",

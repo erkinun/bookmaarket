@@ -14,8 +14,8 @@ GET     /bookmarks/new              controllers.BookmarkController.newBookmark
 POST    /bookmarks/save             controllers.BookmarkController.save
 GET     /bookmarks/:id              controllers.BookmarkController.show(id: Long)
 
-GET     /users/new                  controllers.SignupController.registerPage
-POST    /users/save                 controllers.SignupController.createUser
+GET     /user/new                  controllers.SignupController.registerPage
+POST    /user/save                 controllers.SignupController.createUser
 
 
 # Map static resources from the /public folder to the /assets URL path

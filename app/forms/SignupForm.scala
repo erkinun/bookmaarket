@@ -3,9 +3,7 @@ package forms
 import play.api.data.Form
 import play.api.data.Forms._
 
-/**
-  * Created by erkinunlu on 23/04/2017.
-  */
+
 object SignupForm {
   val form = Form (
     mapping(

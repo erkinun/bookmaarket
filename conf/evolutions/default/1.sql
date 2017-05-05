@@ -21,6 +21,7 @@ INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('http://stackoverf
 INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('https://www.amazon.com/Daniel-Goleman/e/B000APZC9O/ref=sr_tc_2_0?qid=1479986557&sr=8-2-ent', 'Daniel Goleman', 'Books');
 INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('https://www.amazon.com/Self-Compassion-Proven-Power-Being-Yourself-ebook/dp/B004JN1DBO/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1479899414&sr=8-1', 'Self compassion book', 'Books');
 INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('https://www.ibm.com/developerworks/views/java/libraryview.jsp?search_by=scala+neward', 'Scala Tutorials', 'Scala');
+INSERT INTO BOOKMARKS (URL, DESCRIPTION, FOLDER_NAME) VALUES ('http://blog.bruchez.name/search/label/scala', 'Scala Tutorials', 'Scala');
 
 # --- !Downs
 
